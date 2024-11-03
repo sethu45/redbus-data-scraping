@@ -2,6 +2,7 @@ import streamlit as st
 import pymysql
 import pandas as pd
 from dotenv import load_dotenv
+import matplotlib.pyplot as plt
 import os
 
 st.set_page_config(layout="wide")  # Set layout to wide
@@ -72,9 +73,6 @@ def fetch_data(bus_route=None, departing_time=None, min_rating=None, min_price=N
     # Retrieve data
     data = pd.read_sql(query, conn)
     conn.close()
-
-    # Remove duplicate rows
-    data = data.drop_duplicates()
 
     # Convert time columns to a readable format
     if 'departing_time' in data.columns:
