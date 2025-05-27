@@ -1,4 +1,4 @@
-# Redbus Data Scarping
+# Redbus Data Scraping
 A Streamlit application for scraping and filtering bus travel data from Redbus. Automates data extraction of routes, schedules, prices, and seat availability using Selenium.
 
 In ***data_scraping.ipynb*** scrape bus details include 10 Government state buses and store the collected data from selenium and store it into csv file. In ***data_preprocessing.ipynb*** preprocess the data 
